@@ -1,0 +1,31 @@
+nav {
+  /* box-sizing: border-box; */
+  height: 120px;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+span {
+  display: flex;
+  font-family: 'Bungee', cursive;
+  margin-right: 1.5em;
+  margin-left: 1.5em;
+  margin-bottom: 0.15em;
+  font-size: 60px;
+}
+svg {
+  color: red;
+  height: 1em;
+}
+.nav-new {
+  margin-right: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  margin-bottom: 0.3em;
+}

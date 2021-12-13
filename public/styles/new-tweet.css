@@ -1,0 +1,17 @@
+.new-tweet {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: stretch;
+}
+label.new-tweet {
+  border:black solid 3px;
+}
+img.example {
+  display: flex;
+  flex-direction:column;
+  align-self: center;
+  width:550px;
+}
