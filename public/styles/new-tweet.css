@@ -3,11 +3,27 @@
   position: relative;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  align-items: stretch;
   align-content: stretch;
 }
-label.new-tweet {
-  border:black solid 3px;
+.tweet-a {
+  display: flex;
+  border-bottom:black solid 3px;
+}
+.tweet-b {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee';
+  position: relative;
+  top: 10px;
+}
+button {
+  background-color: darkblue;
+  color: white;
+}
+textarea {
+  background-color: #f4f1ec;
+  border: 0px;
 }
 img.example {
   display: flex;
