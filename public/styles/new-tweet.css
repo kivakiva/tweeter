@@ -21,6 +21,10 @@ button {
   background-color: darkblue;
   color: white;
 }
+output[excess=true] {
+  color: red;
+}
+
 textarea {
   background-color: #f4f1ec;
   border: 0px;
