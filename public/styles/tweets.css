@@ -40,6 +40,9 @@
   font-family: "Font Awesome\ 5 Free";
   color:darkviolet;
 }
+.tweets .social-icons :hover {
+  color:rgb(21, 18, 156)
+}
 .tweets .content {
   width: 95%;
   padding-left: 15px;

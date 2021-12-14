@@ -1,6 +1,7 @@
 nav {
   /* box-sizing: border-box; */
-  height: 120px;
+  height: 90px;
+  padding-bottom: 5px;
   background-color: #4056A1;
   color: #FFFFFF;
   display: flex;
