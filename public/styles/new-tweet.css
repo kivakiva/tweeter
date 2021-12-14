@@ -5,6 +5,7 @@
   justify-content: space-around;
   align-items: stretch;
   align-content: stretch;
+  margin-block: 30px;
   width: 90%;
 }
 .tweet-a {

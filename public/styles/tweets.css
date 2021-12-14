@@ -42,7 +42,6 @@
 }
 .tweets .content {
   width: 95%;
-  border-bottom: black 3px solid;
   padding-left: 15px;
   padding-bottom: 25px;
 }
@@ -51,10 +50,12 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-top: black 3px solid;
   position: relative;
-  width: 100%;
-  padding: 15px;
-  font-size: x-small;
+  width: 95%;
+  padding-top: 5px;
+  padding-block: 15px;
+  font-size: smaller;
 }
 
 img.test {
