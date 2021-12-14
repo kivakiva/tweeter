@@ -10,7 +10,7 @@ header {
   top: 120px;
   z-index: 1;
 }
-.background {
+header .background {
   position: absolute;
   height: 100%;
   width: 100%;

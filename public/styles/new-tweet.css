@@ -5,11 +5,19 @@
   justify-content: space-around;
   align-items: stretch;
   align-content: stretch;
+  width: 90%;
 }
 .tweet-a {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   border-bottom:black solid 3px;
 }
+/* .tweet-a textarea {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 2;
+} */
 .tweet-b {
   display: flex;
   justify-content: space-between;
@@ -17,19 +25,19 @@
   position: relative;
   top: 10px;
 }
-button {
+.new-tweet button {
   background-color: darkblue;
   color: white;
 }
-output[excess=true] {
+.new-tweet output[excess=true] {
   color: red;
 }
 
-textarea {
+.new-tweet textarea {
   background-color: #f4f1ec;
   border: 0px;
 }
-img.example {
+.new-tweet img.example {
   display: flex;
   flex-direction:column;
   align-self: center;

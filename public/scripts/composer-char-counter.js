@@ -14,6 +14,8 @@ $(document).ready(function() {
 
     if (remaining < 0) {
       excess.value = true;
+    } else {
+      excess.value = false;
     }
   })
 });
