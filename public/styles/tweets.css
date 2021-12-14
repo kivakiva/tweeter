@@ -1,40 +1,40 @@
-article.tweets {
-  width: 90%;
-}
-
-
-
-
-
-
-
-
-
-
-
-/* .tweets {
+.tweets {
   display: flex;
   flex-direction: column;
   position: relative;
   top: 30px;
-  align-items: stretch;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
   background-color: #f3f1ec;
   width: 90%;
-  height: 400px;
+  height: 200px;
   border: black 3px solid;
 }
 .tweets header {
+  display: flex;
   flex-direction: row;
+  flex-grow: 1;
   justify-content: space-between;
-  height: 10px;
   position: relative;
+  width: 100%;
+  padding: 15px;
+}
+.tweets .content {
+  width: 95%;
+  border-bottom: black 3px solid;
+  padding-left: 15px;
+  padding-bottom: 25px;
 }
 
 .tweets footer {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   position: relative;
-  height: 10px;
-} */
+  width: 100%;
+  padding: 15px;
+}
 
+img.test {
+  width: 100%;
+}
