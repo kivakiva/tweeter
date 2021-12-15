@@ -25,7 +25,12 @@ $(() => {
 
   loadTweets();
 
-
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+  
 
  const createTweetElement = (tweetObject) => {
 
@@ -40,7 +45,7 @@ $(() => {
         <div class="username">${tweetObject.user.handle}</div>
       </div>
     </header>
-    <div class="content">${tweetObject.content.text}</div>
+    <div class="content">${escape(tweetObject.content.text)}</div>
     <footer>
       <div class="age">
         ${timeago.format(tweetObject.created_at)}
