@@ -79,15 +79,25 @@ $(() => {
   const $tweetsContainer = $('#tweets-container')
   $tweetsContainer.empty();
 
-  for (let tweet of tweets) {
-    const $tweet = createTweetElement(tweet);
-    $('#tweets-container').prepend($tweet);
+    for (let tweet of tweets) {
+      const $tweet = createTweetElement(tweet);
+      $tweetsContainer.prepend($tweet);
+    }
   }
-}
 
  renderTweets(data);
 
+  const $form = $(".new-tweet form")
 
+  $form.on('submit', function (event) {
+    event.preventDefault();
+
+    const $serializeTweet = $(this).serialize();
+    console.log({$serializeTweet})
+
+    $.post('/tweets', $serializeTweet);
+
+  })
 
 
 
