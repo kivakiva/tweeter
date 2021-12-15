@@ -22,7 +22,7 @@ header .background {
   left: 0px;
   z-index: -1;
 }
-header img {
+.top img {
   position: relative;
   top: 35px;
 }
