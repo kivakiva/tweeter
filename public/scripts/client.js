@@ -35,7 +35,7 @@ $(() => {
     <div class="content">${tweetObject.content.text}</div>
     <footer>
       <div class="age">
-        ${tweetObject.created_at} day(s) ago
+        ${timeago.format(tweetObject.created_at)}
       </div>
       <div class="social-icons">
         <i class="fas fa-flag"></i> 
