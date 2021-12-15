@@ -48,8 +48,9 @@ $(() => {
   return $tweet;
  }
 
-console.log(createTweetElement(practiceTweet));
+ const $tweet = createTweetElement(practiceTweet);
 
+ $('#tweets-container').prepend($tweet);
 
 
 
