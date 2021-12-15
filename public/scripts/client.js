@@ -7,41 +7,59 @@
 $(() => {
 
 
-  const practiceTweet = {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-        "handle": "@SirIsaac"
+
+  const loadTweets = function () {
+    $.ajax({
+
+      url: '/tweets',
+      method: 'GET',
+      dataType: 'json',
+      success: (tweets) => {
+        renderTweets(tweets);
       },
-    "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-    "created_at": 1461116232227
- };
- const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-];
+      error: (err) => {
+        console.err(err);
+      }
+    });
+  };
+
+  loadTweets();
+
+//   const practiceTweet = {
+//     "user": {
+//       "name": "Newton",
+//       "avatars": "https://i.imgur.com/73hZDYK.png",
+//         "handle": "@SirIsaac"
+//       },
+//     "content": {
+//         "text": "If I have seen further it is by standing on the shoulders of giants"
+//       },
+//     "created_at": 1461116232227
+//  };
+//  const data = [
+//   {
+//     "user": {
+//       "name": "Newton",
+//       "avatars": "https://i.imgur.com/73hZDYK.png"
+//       ,
+//       "handle": "@SirIsaac"
+//     },
+//     "content": {
+//       "text": "If I have seen further it is by standing on the shoulders of giants"
+//     },
+//     "created_at": 1461116232227
+//   },
+//   {
+//     "user": {
+//       "name": "Descartes",
+//       "avatars": "https://i.imgur.com/nlhLi3I.png",
+//       "handle": "@rd" },
+//     "content": {
+//       "text": "Je pense , donc je suis"
+//     },
+//     "created_at": 1461113959088
+//   }
+// ];
 
  const createTweetElement = (tweetObject) => {
 
@@ -85,18 +103,20 @@ $(() => {
     }
   }
 
- renderTweets(data);
 
-  const $form = $(".new-tweet form")
+  const $button = $('button');
+  console.log($button)
 
-  $form.on('submit', function (event) {
+  $button.on('submit', function (event) {
     event.preventDefault();
+    alert("here we go")
+    alert( event.isDefaultPrevented() );
 
     const $serializeTweet = $(this).serialize();
     console.log({$serializeTweet})
 
-    $.post('/tweets', $serializeTweet);
-
+    $.post('/tweets', $serializeTweet)
+    .then(loadTweets);
   })
 
 
