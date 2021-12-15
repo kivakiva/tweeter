@@ -70,19 +70,23 @@ $(() => {
   }
 
 
-  const $button = $('button');
-  console.log($button)
+  const $textarea = $('textarea');
   // console.log($('textarea'));
   $('form').submit(function (event) {
     event.preventDefault();
-    alert("here we go")
-    alert( event.isDefaultPrevented() );
-    return;
-    const $serializeTweet = $(this).serialize();
-    console.log({$serializeTweet})
-
-    $.post('/tweets', $serializeTweet)
-    .then(loadTweets);
+    const characters = $textarea.val().trim().length;
+    console.log('null or empty?', $textarea.val()=== null)
+    if ( characters === 0 ) {
+      alert("cat got your tongue?")
+    } else if (characters > 140) {
+      alert("much too much!")
+    } else {      
+      const $serializeTweet = $(this).serialize();
+      console.log($textarea.val());
+  
+      $.post('/tweets', $serializeTweet)
+      .then(loadTweets);
+    }
   })
 
 
