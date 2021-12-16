@@ -70,7 +70,6 @@ $(() => {
   const $newTweetButton = $(".nav-new");
   const $newTweet = $(".new-tweet");
   $newTweet.hide();
-  console.log($newTweet[0].attributes);
   $newTweetButton.css('cursor', 'pointer');
   $newTweetButton.click(function () {
     if ($newTweet.is(":hidden")) {
@@ -79,34 +78,23 @@ $(() => {
       $newTweet.hide(300);
     }
   });
-
+  
   //jump back to top
   const $toTopButton = $(".to-top");
+  $toTopButton.css('cursor', 'pointer');
   $toTopButton.click(function () {
     $("html, body").animate({scrollTop: 0}, 1000);
- });
+  });
 
- //only show back to top button if the document height is taller than window
-//  const showButton = function () {
-   $(window).on('scroll', function () {
-     if (window.scrollY === 0) {
-       $toTopButton.hide()
-     } else {
-       $toTopButton.show()
-     }
-   })
-  // } else {
-    // console.log('document: ',$(document).height(), "window: ", $(window).height()): ;
-  //   $toTopButton.hide()
-  // }};
+  //only show back to top button at the bottom of the page
+  $(window).on('scroll', function () {
+    if (window.scrollY === 0) {
+      $toTopButton.hide()
+    } else {
+      $toTopButton.show()
+    }
+  })
 
- //check on load
-//  showButton();
-
- //check on resize
-//  $(window).resize(function(){
-//    showButton();
-//   });
 
   //handle submission and validation
   const $emptyError = $(".no-tweet");
@@ -136,14 +124,6 @@ $(() => {
       .then(loadTweets);
     }
   });
-
-
-
-
-
-
-
-
 
 
 })

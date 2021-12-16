@@ -59,6 +59,7 @@ main {
     width: 30%;
     top: 135px;
     height: 410px;
+    margin-left: 20px;
   }
   .error-message * {
     margin-block: 33px;
