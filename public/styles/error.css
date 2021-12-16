@@ -1,0 +1,10 @@
+.error-message {
+  color: red;
+  font-size: larger;
+  width: 90%;
+}
+.error-message * {
+  border: darkblue 3px solid;
+  justify-self: center;
+  align-self: center;
+}
