@@ -1,10 +1,13 @@
 .error-message {
-  color: red;
+  color: darkred;
   font-size: larger;
   width: 90%;
 }
 .error-message * {
-  border: darkblue 3px solid;
+  border: darkred 3px solid;
+  background-color: lightcoral;
+  padding: 10px;
+  text-align: center;
   justify-self: center;
   align-self: center;
 }

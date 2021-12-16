@@ -74,21 +74,28 @@ $(() => {
     }
   }
 
-
+  const $emptyError = $(".no-tweet")
+  $emptyError.hide();
+  const $tooLongError = $(".long-tweet")
+  $tooLongError.hide();
   const $textarea = $('textarea');
-  // console.log($('textarea'));
+
   $('form').submit(function (event) {
     event.preventDefault();
     const characters = $textarea.val().trim().length;
-    console.log('null or empty?', $textarea.val()=== null)
+    
     if ( characters === 0 ) {
-      alert("cat got your tongue?")
+      $tooLongError.hide(300);
+      $emptyError.show(300);
+      
     } else if (characters > 140) {
-      alert("much too much!")
+      $emptyError.hide(300);
+      $tooLongError.show(300);
+      
     } else {      
-      const $serializeTweet = $(this).serialize();
-      console.log($textarea.val());
-  
+      $emptyError.hide(300);
+      $tooLongError.hide(300);
+      const $serializeTweet = $(this).serialize();  
       $.post('/tweets', $serializeTweet)
       .then(loadTweets);
     }
