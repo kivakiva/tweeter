@@ -122,6 +122,7 @@ $(() => {
       $textarea.val("");
       $.post('/tweets', $serializeTweet)
       .then(loadTweets);
+      $(".counter").val(140);
     }
   });
 

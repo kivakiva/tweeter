@@ -10,12 +10,12 @@ nav {
   position: fixed;
   width: 100%;
   z-index: 2;
+  padding-inline: 1.5em;
 }
 nav span {
   display: flex;
   font-family: 'Bungee', cursive;
   margin-right: 1.5em;
-  margin-left: 1.5em;
   margin-bottom: 0.15em;
   font-size: 60px;
 }
@@ -33,7 +33,6 @@ nav svg {
   animation-iteration-count: 2;
 }
 nav .nav-new {
-  margin-right: 1.5em;
   display: flex;
   flex-direction: column;
   justify-items: center;
