@@ -66,6 +66,20 @@ $(() => {
     }
   };
 
+  //toggle visibility of tweetbox
+  const $newTweetButton = $(".nav-new");
+  const $newTweet = $(".new-tweet");
+  $newTweet.hide();
+  console.log($newTweet[0].attributes);
+  $newTweetButton.css('cursor', 'pointer');
+  $newTweetButton.click(function () {
+    if ($newTweet.is(":hidden")) {
+      $newTweet.show(300);
+    } else {
+      $newTweet.hide(300);
+    }
+  });
+
   //handle submission and validation
   const $emptyError = $(".no-tweet");
   $emptyError.hide();
