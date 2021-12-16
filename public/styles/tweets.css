@@ -1,7 +1,6 @@
 #tweets-container {
   width: 90%;
 }
-
 .tweets {
   display: flex;
   flex-direction: column;
@@ -51,7 +50,6 @@
   padding-left: 15px;
   padding-bottom: 25px;
 }
-
 .tweets footer {
   display: flex;
   flex-direction: row;

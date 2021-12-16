@@ -46,7 +46,7 @@ main {
  */
 
  @media only screen and (min-width: 1024px) {
-   body nav {
+  body nav {
      top: 0px
    }
   body {
@@ -60,6 +60,8 @@ main {
     top: 135px;
     height: 410px;
   }
-
+  .error-message * {
+    margin-block: 33px;
+  }
 
  }

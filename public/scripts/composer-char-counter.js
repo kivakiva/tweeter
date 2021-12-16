@@ -1,20 +1,19 @@
-
-
 $(document).ready(function() {
-  // --- our code goes here ---
+
   $('textarea').on("input", function(event) {
     
-    let chars = $(this).val().length;
+    //personal choice to not include untrimmed whitespace towards count
+    let chars = $(this).val().trim().length;
     let counter = $($(this)[0].parentNode[2]);
     counter.val(140 - chars);
 
     let remaining =  counter.val();
-    let excess = counter[0].attributes[3];
+    let exceedsLimit = counter[0].attributes[3];
 
     if (remaining < 0) {
-      excess.value = true;
+      exceedsLimit.value = true;
     } else {
-      excess.value = false;
+      exceedsLimit.value = false;
     }
   })
 });

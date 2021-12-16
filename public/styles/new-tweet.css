@@ -33,7 +33,6 @@
 .new-tweet output[excess=true] {
   color: red;
 }
-
 .new-tweet textarea {
   flex-grow: 1;
   background-color: #f4f1ec;

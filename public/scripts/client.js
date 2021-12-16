@@ -1,12 +1,4 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 $(() => {
-
-
 
   const loadTweets = function () {
     $.ajax({
@@ -23,8 +15,10 @@ $(() => {
     });
   };
 
+  //load initial tweets
   loadTweets();
 
+  //helper to prevent mailcious code
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -60,10 +54,9 @@ $(() => {
   return $tweet;
  }
 
+ //render tweets in ascending order by date
  const renderTweets = function(tweets) {
-  // loops through tweets
-  // calls createTweetElement for each tweet
-  // takes return value and appends it to the tweets container
+
   const $tweetsContainer = $('#tweets-container')
   $tweetsContainer.empty();
 
@@ -71,11 +64,12 @@ $(() => {
       const $tweet = createTweetElement(tweet);
       $tweetsContainer.prepend($tweet);
     }
-  }
+  };
 
-  const $emptyError = $(".no-tweet")
+  //handle submission and validation
+  const $emptyError = $(".no-tweet");
   $emptyError.hide();
-  const $tooLongError = $(".long-tweet")
+  const $tooLongError = $(".long-tweet");
   $tooLongError.hide();
   const $textarea = $('textarea');
 
@@ -83,7 +77,7 @@ $(() => {
     event.preventDefault();
     const characters = $textarea.val().trim().length;
     
-    if ( characters === 0 ) {
+    if ( characters === 0 || $textarea === null) {
       $tooLongError.hide(300);
       $emptyError.show(300);
       
@@ -98,7 +92,7 @@ $(() => {
       $.post('/tweets', $serializeTweet)
       .then(loadTweets);
     }
-  })
+  });
 
 
 

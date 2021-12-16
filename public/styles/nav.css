@@ -23,7 +23,6 @@ nav span {
   0% {top: 0px;}
   50% {top: 7px;}
   100% {top: 0px;}
-
 }
 nav svg {
   color: red;
