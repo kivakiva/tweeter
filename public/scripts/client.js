@@ -54,7 +54,7 @@ $(() => {
   return $tweet;
  }
 
- //render tweets in ascending order by date
+ //render tweets in descending order by date
  const renderTweets = function(tweets) {
 
   const $tweetsContainer = $('#tweets-container')
@@ -89,6 +89,7 @@ $(() => {
       $emptyError.hide(300);
       $tooLongError.hide(300);
       const $serializeTweet = $(this).serialize();  
+      $textarea.val("");
       $.post('/tweets', $serializeTweet)
       .then(loadTweets);
     }
