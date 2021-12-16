@@ -44,3 +44,22 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ @media only screen and (min-width: 1024px) {
+   body nav {
+     top: 0px
+   }
+  body {
+    flex-direction: row;
+  }
+  body .container {
+    width: 60%
+  }
+  body header.top {
+    width: 30%;
+    top: 135px;
+    height: 410px;
+  }
+
+
+ }
