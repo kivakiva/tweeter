@@ -19,9 +19,19 @@ nav span {
   margin-bottom: 0.15em;
   font-size: 60px;
 }
+@keyframes bounce {
+  0% {top: 0px;}
+  50% {top: 7px;}
+  100% {top: 0px;}
+
+}
 nav svg {
   color: red;
   height: 1em;
+  position: relative;
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
 }
 nav .nav-new {
   margin-right: 1.5em;
