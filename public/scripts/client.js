@@ -31,7 +31,6 @@ $(() => {
     return div.innerHTML;
   };
   
-
  const createTweetElement = (tweetObject) => {
 
   const $tweet = $(
