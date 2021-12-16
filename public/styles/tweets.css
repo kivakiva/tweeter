@@ -1,17 +1,18 @@
 #tweets-container {
   width: 90%;
+  margin-top: -50px
 }
 .tweets {
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-top: 40px;
+  margin-top: 100px;
   align-items: center;
   justify-content: space-between;
   background-color: #f3f1ec;
   width: 100%;
   border: black 3px solid;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
 }
 .tweets:hover {
   box-shadow: 10px 5px 5px 1px rgb(166, 185, 185);

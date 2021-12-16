@@ -80,6 +80,34 @@ $(() => {
     }
   });
 
+  //jump back to top
+  const $toTopButton = $(".to-top");
+  $toTopButton.click(function () {
+    $("html, body").animate({scrollTop: 0}, 1000);
+ });
+
+ //only show back to top button if the document height is taller than window
+//  const showButton = function () {
+   $(window).on('scroll', function () {
+     if (window.scrollY === 0) {
+       $toTopButton.hide()
+     } else {
+       $toTopButton.show()
+     }
+   })
+  // } else {
+    // console.log('document: ',$(document).height(), "window: ", $(window).height()): ;
+  //   $toTopButton.hide()
+  // }};
+
+ //check on load
+//  showButton();
+
+ //check on resize
+//  $(window).resize(function(){
+//    showButton();
+//   });
+
   //handle submission and validation
   const $emptyError = $(".no-tweet");
   $emptyError.hide();
@@ -89,7 +117,7 @@ $(() => {
 
   $('form').submit(function (event) {
     event.preventDefault();
-    const characters = $textarea.val().trim().length;
+    const characters = $textarea.val().length;
     
     if ( characters === 0 || $textarea === null) {
       $tooLongError.hide(300);

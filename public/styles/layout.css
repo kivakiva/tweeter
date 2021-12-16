@@ -63,5 +63,11 @@ main {
   .error-message * {
     margin-block: 33px;
   }
-
+  
  }
+  .to-top {
+    margin-right: 65px;
+    height: 70px;
+    align-self: flex-end;
+    color: darkslateblue;
+  }

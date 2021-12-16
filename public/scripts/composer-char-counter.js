@@ -3,7 +3,7 @@ $(document).ready(function() {
   $('textarea').on("input", function(event) {
     
     //personal choice to not include untrimmed whitespace towards count
-    let chars = $(this).val().trim().length;
+    let chars = $(this).val().length;
     let counter = $($(this)[0].parentNode[2]);
     counter.val(140 - chars);
 
